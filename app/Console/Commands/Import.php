@@ -50,8 +50,8 @@ class Import extends Command
             $content = $document->getContent();
             $yaml = $document->getYAML();
             $pubDate = Carbon::parse($yaml['date']);
-            $urlDate = preg_replace('/(\d{4})-(\d{2})-(\d{2})-/', '$1/$2/$3/', $pubDate->toDateString());
-            $yaml['slug'] = explode(".", explode("/", $file)[1])[0];
+            $urlDate = preg_replace('/(\d{4})-(\d{2})-(\d{2})/', '$1/$2/$3/', $pubDate->toDateString());
+            $yaml['slug'] = "/" . $urlDate . preg_replace('/(\d{4})-(\d{2})-(\d{2})-/', '', explode(".", explode("/", $file)[1])[0]) . "/";
             Post::create([
                 'text'=> $content,
                 'title' => $yaml['title'],
