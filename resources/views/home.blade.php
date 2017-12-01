@@ -12,12 +12,18 @@
     <body>
         <section class="section">
             <div class="container">
-                @foreach ($posts as $post)
-                    <h1 class="title">
-                        {{ $post->title }}
-                    </h1>
-                    {!! $post->text !!}
-                @endforeach
+                <div class="columns">
+                    <div class="column is-two-thirds">
+                        @foreach ($posts as $post)
+                            <h1 class="title">
+                                {{ $post->title }}
+                            </h1>
+                            {!! $post->text !!}
+                        @endforeach
+                    </div>
+                    <div class="column is-one-third">
+                    </div>
+                </div>
             </div>
         </section>
     </body>
