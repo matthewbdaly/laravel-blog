@@ -33,8 +33,7 @@
                             {!! $post->text !!}
                         @endforeach
                     </div>
-                    <div class="column is-one-third">
-                    </div>
+                    @include('partials.sidebar')
                 </div>
             </div>
         </section>
