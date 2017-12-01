@@ -19,4 +19,12 @@ class FrontPageController extends Controller
             'posts' => $posts
         ]);
     }
+
+    public function bySlug($slug)
+    {
+        $post = Post::where('slug', "/".$slug."/")->first();
+        return view('post', [
+            'post' => $post
+        ]);
+    }
 }
