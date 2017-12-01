@@ -10,15 +10,15 @@
 
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
+        <section class="section">
+            <div class="container">
                 @foreach ($posts as $post)
-                    <div class="title m-b-md">
+                    <h1 class="title">
                         {{ $post->title }}
-                    </div>
+                    </h1>
                     {!! $post->text !!}
                 @endforeach
             </div>
-        </div>
+        </section>
     </body>
 </html>
