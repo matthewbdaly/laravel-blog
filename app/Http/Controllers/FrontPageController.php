@@ -27,4 +27,14 @@ class FrontPageController extends Controller
             'post' => $post
         ]);
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('q');
+        $posts = Post::search($search)->get();
+        eval(\Psy\Sh());
+        return view('home', [
+            'posts' => $posts
+        ]);
+    }
 }

@@ -14,4 +14,12 @@ class Post extends Model
         'author_id'
     ];
 
+    public function scopeSearch($query, $search)
+    {
+        if ($search) {
+            return $query->whereRaw("searchtext @@ to_tsquery('".$search."')");
+        } else {
+            return $query;
+        }
+    }
 }
