@@ -49,14 +49,14 @@ class Import extends Command
             $document = $this->parser->parse(Storage::get($file));
             $content = $document->getContent();
             $yaml = $document->getYAML();
-            if (!array_key_exists('slug', $yaml)) {
-                $yaml['slug'] = explode(".", explode("/", $file)[1])[0];
-            }
+            $pubDate = Carbon::parse($yaml['date']);
+            $urlDate = preg_replace('/(\d{4})-(\d{2})-(\d{2})-/', '$1/$2/$3/', $pubDate->toDateString());
+            $yaml['slug'] = explode(".", explode("/", $file)[1])[0];
             Post::create([
                 'text'=> $content,
                 'title' => $yaml['title'],
                 'slug' => $yaml['slug'],
-                'pub_date' => Carbon::parse($yaml['date']),
+                'pub_date' => $pubDate,
                 'author_id' => $user->id,
             ]);
         }
