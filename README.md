@@ -1,2 +1,2 @@
 # laravel-blog
-Blogging engine built with Laravel
+Blogging engine built with Laravel for demo purposes
