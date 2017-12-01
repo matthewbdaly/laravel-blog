@@ -31,9 +31,10 @@ class FrontPageController extends Controller
     public function search(Request $request)
     {
         $search = $request->input('q');
-        $posts = Post::search($search)->get();
-        return view('home', [
-            'posts' => $posts
+        $posts = Post::search($search)->simplePaginate(5);
+        return view('search', [
+            'posts' => $posts,
+            'search' => $search,
         ]);
     }
 }
