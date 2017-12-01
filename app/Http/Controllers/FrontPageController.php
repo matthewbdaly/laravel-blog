@@ -32,7 +32,6 @@ class FrontPageController extends Controller
     {
         $search = $request->input('q');
         $posts = Post::search($search)->get();
-        eval(\Psy\Sh());
         return view('home', [
             'posts' => $posts
         ]);

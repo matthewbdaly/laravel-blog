@@ -16,10 +16,10 @@ class Post extends Model
 
     public function scopeSearch($query, $search)
     {
-        if ($search) {
-            return $query->whereRaw("searchtext @@ to_tsquery('".$search."')");
-        } else {
+        if (!$search) {
             return $query;
         }
+        return $query->whereRaw("searchtext @@ to_tsquery('".$search."')")
+            ->orderByRaw("ts_rank(searchtext, to_tsquery('".$search."')) DESC");
     }
 }
