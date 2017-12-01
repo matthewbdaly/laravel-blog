@@ -10,6 +10,18 @@
 
     </head>
     <body>
+        <section class="hero">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Matthew Daly's Blog
+              </h1>
+              <h2 class="subtitle">
+                I'm a web developer in Norfolk. This is my blog...
+              </h2>
+            </div>
+          </div>
+        </section>
         <section class="section">
             <div class="container">
                 <div class="columns">
