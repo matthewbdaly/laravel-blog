@@ -14,7 +14,7 @@
           <div class="hero-body">
             <div class="container">
               <h1 class="title">
-                Matthew Daly's Blog
+                <a href="/">Matthew Daly's Blog</a>
               </h1>
               <h2 class="subtitle">
                 I'm a web developer in Norfolk. This is my blog...
