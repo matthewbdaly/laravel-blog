@@ -19,7 +19,7 @@ class Post extends Model
         if (!$search) {
             return $query;
         }
-        return $query->whereRaw("searchtext @@ to_tsquery('".$search."')")
-            ->orderByRaw("ts_rank(searchtext, to_tsquery('".$search."')) DESC");
+        return $query->whereRaw("searchtext @@ to_tsquery('english', '".$search."')")
+            ->orderByRaw("ts_rank(searchtext, to_tsquery('english', '".$search."')) DESC");
     }
 }
