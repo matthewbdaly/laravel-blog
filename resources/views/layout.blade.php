@@ -10,17 +10,35 @@
 
     </head>
     <body>
-        <section class="hero">
-          <div class="hero-body">
-            <div class="container">
-              <h1 class="title">
-                <a href="/">Matthew Daly's Blog</a>
-              </h1>
-              <h2 class="subtitle">
-                I'm a web developer in Norfolk. This is my blog...
-              </h2>
+        <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="http://www.placecage.com/c/20/20" alt="Matthew Daly's Blog" width="20" height="20">
+                </a>
+
+                <button class="button navbar-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="navbar-end">
+                    <form method="GET" action="/search">
+                        <input class="input" type="search" name="q" placeholder="Search..." />
+                    </form>
+                </div>
             </div>
-          </div>
+        </nav>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        <a href="/">Matthew Daly's Blog</a>
+                    </h1>
+                    <h2 class="subtitle">
+                        I'm a web developer in Norfolk. This is my blog...
+                    </h2>
+                </div>
+            </div>
         </section>
         <section class="section">
             <div class="container">
