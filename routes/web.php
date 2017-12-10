@@ -13,4 +13,5 @@
 
 Route::get('/', 'FrontPageController@index');
 Route::get('/search', 'FrontPageController@search');
+Route::get('/posts/{page}', 'FrontPageController@page');
 Route::get('/{slug}', 'FrontPageController@bySlug')->where('slug', '^\d{4}/\d{2}/\d{2}/[a-zA-Z0-9-]+/?$');

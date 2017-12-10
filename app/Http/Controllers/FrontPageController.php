@@ -20,6 +20,15 @@ class FrontPageController extends Controller
         ]);
     }
 
+    public function page(int $page = 1)
+    {
+        $posts = Post::orderBy('pub_date', 'desc')->limit(5)->offset(($page - 1) * 5)->get();
+        return view('home', [
+            'posts' => $posts,
+            'page' => $page,
+        ]);
+    }
+
     public function bySlug($slug)
     {
         $post = Post::where('slug', "/".$slug."/")->first();
