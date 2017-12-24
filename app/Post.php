@@ -3,9 +3,12 @@
 namespace LaravelBlog;
 
 use Illuminate\Database\Eloquent\Model;
+use Matthewbdaly\LaravelComments\Eloquent\Traits\Commentable;
 
 class Post extends Model
 {
+    use Commentable;
+
     protected $fillable = [
         'title',
         'pub_date',

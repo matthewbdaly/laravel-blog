@@ -5,4 +5,5 @@
                                 <a href="{{ $post->slug }}">{{ $post->title }}</a>
                             </h1>
                             {!! $post->text !!}
+                            @include('comments::comments', ['parent' => $post])
 @endsection
