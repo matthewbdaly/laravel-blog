@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('LaravelBlog\Contracts\Repositories\Post', function () {
+            $baseRepo = new \LaravelBlog\Eloquent\Repositories\Post(new \LaravelBlog\Eloquent\Models\Post);
+            $cachingRepo = new \LaravelBlog\Eloquent\Repositories\Decorators\Post($baseRepo, $this->app['cache.store']);
+            return $cachingRepo;
+        });
     }
 }
