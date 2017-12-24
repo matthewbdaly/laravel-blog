@@ -6,4 +6,5 @@ use Matthewbdaly\LaravelRepositories\Repositories\Interfaces\AbstractRepositoryI
 
 interface Post extends AbstractRepositoryInterface
 {
+    public function orderByLimit(string $field, string $order, int $limit = 5, int $offset = null);
 }

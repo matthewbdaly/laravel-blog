@@ -19,7 +19,7 @@ class FrontPageController extends Controller
      */
     public function index()
     {
-        $posts = $this->repository->orderBy('pub_date', 'desc')->limit(5)->get();
+        $posts = $this->repository->orderByLimit('pub_date', 'desc', 5);
         return view('home', [
             'posts' => $posts
         ]);
@@ -27,7 +27,7 @@ class FrontPageController extends Controller
 
     public function page(int $page = 1)
     {
-        $posts = $this->repository->orderBy('pub_date', 'desc')->limit(5)->offset(($page - 1) * 5)->get();
+        $posts = $this->repository->orderByLimit('pub_date', 'desc', 5, ($page - 1) * 5);
         return view('home', [
             'posts' => $posts,
             'page' => $page,
