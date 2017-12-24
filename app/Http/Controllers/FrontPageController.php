@@ -36,7 +36,7 @@ class FrontPageController extends Controller
 
     public function bySlug($slug)
     {
-        $post = $this->repositorty->where('slug', "/".$slug."/")->first();
+        $post = $this->repository->bySlug("/".$slug."/");
         return view('post', [
             'post' => $post
         ]);

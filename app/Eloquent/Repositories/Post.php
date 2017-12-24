@@ -22,4 +22,9 @@ class Post extends Base implements PostContract
     {
         return $this->model->orderBy($field, $order)->limit($limit)->offset($offset)->get();
     }
+
+    public function bySlug(string $slug)
+    {
+        return $this->model->where('slug', $slug)->first();
+    }
 }

@@ -20,4 +20,11 @@ class Post extends BaseDecorator implements PostContract
             return $this->repository->orderByLimit($field, $order, $limit, $offset);
         });
     }
+
+    public function bySlug(string $slug)
+    {
+        return $this->cache->tags($this->getModel())->remember($slug, 60, function () use ($slug) {
+            return $this->repository->bySlug($slug);
+        });
+    }
 }
