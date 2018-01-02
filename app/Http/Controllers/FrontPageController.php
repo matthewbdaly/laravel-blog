@@ -46,7 +46,9 @@ class FrontPageController extends Controller
     public function search(Request $request)
     {
         $search = $request->input('q');
-        $posts = new Paginator($this->repository->search($search), 5, 0);
+        $page = $request->input('page', 1) - 1;
+        $data = $this->repository->search($search)->slice($page * 5, 5);
+        $posts = new Paginator($data, 5, $page);
         return view('search', [
             'posts' => $posts,
             'search' => $search,
