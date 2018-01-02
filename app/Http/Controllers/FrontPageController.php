@@ -4,6 +4,7 @@ namespace LaravelBlog\Http\Controllers;
 
 use Illuminate\Http\Request;
 use LaravelBlog\Contracts\Repositories\Post;
+use Illuminate\Pagination\Paginator;
 
 class FrontPageController extends Controller
 {
@@ -45,7 +46,7 @@ class FrontPageController extends Controller
     public function search(Request $request)
     {
         $search = $request->input('q');
-        $posts = $this->repository->search($search)->simplePaginate(5);
+        $posts = new Paginator($this->repository->search($search), 5, 0);
         return view('search', [
             'posts' => $posts,
             'search' => $search,

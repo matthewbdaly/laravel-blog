@@ -34,5 +34,4 @@ class Post extends BaseDecorator implements PostContract
             return $this->repository->search($search);
         });
     }
-
 }

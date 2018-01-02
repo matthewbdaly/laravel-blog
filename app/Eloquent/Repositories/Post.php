@@ -27,4 +27,9 @@ class Post extends Base implements PostContract
     {
         return $this->model->where('slug', $slug)->first();
     }
+
+    public function search(string $search)
+    {
+        return $this->model->search($search)->get();
+    }
 }
