@@ -27,4 +27,12 @@ class Post extends BaseDecorator implements PostContract
             return $this->repository->bySlug($slug);
         });
     }
+
+    public function search(string $search)
+    {
+        return $this->cache->tags($this->getModel())->remember('search_'.$search, 60, function () use ($search) {
+            return $this->repository->search($search);
+        });
+    }
+
 }
