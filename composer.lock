@@ -743,22 +743,23 @@
         },
         {
             "name": "matthewbdaly/laravel-flatpages",
-            "version": "1.0.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthewbdaly/laravel-flatpages.git",
-                "reference": "8dbf10cf0d04639bba3c3d0b07d4766c591f065a"
+                "reference": "948f3d6599557f710440c90029a46260dc38a134"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthewbdaly/laravel-flatpages/zipball/8dbf10cf0d04639bba3c3d0b07d4766c591f065a",
-                "reference": "8dbf10cf0d04639bba3c3d0b07d4766c591f065a",
+                "url": "https://api.github.com/repos/matthewbdaly/laravel-flatpages/zipball/948f3d6599557f710440c90029a46260dc38a134",
+                "reference": "948f3d6599557f710440c90029a46260dc38a134",
                 "shasum": ""
             },
             "require": {
                 "matthewbdaly/laravel-repositories": "^1.0"
             },
             "require-dev": {
+                "matthewbdaly/artisan-standalone": "^0.0.3",
                 "mockery/mockery": "^1.0",
                 "orchestra/testbench": "^3.5",
                 "phpunit/phpunit": "^6.4",
@@ -796,7 +797,7 @@
                 "laravel",
                 "pages"
             ],
-            "time": "2017-12-31T19:46:26+00:00"
+            "time": "2018-01-03T11:33:32+00:00"
         },
         {
             "name": "matthewbdaly/laravel-repositories",
