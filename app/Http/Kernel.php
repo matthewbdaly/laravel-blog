@@ -19,6 +19,7 @@ class Kernel extends HttpKernel
         \LaravelBlog\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \LaravelBlog\Http\Middleware\TrustProxies::class,
+        \Matthewbdaly\LaravelFlatpages\Http\Middleware\FlatpageMiddleware::class,
     ];
 
     /**
