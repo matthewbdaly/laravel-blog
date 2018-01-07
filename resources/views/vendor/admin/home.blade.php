@@ -16,9 +16,9 @@
 
                     You are logged in!
 
-                    <ul>
+                    <ul class="list-group">
                         @foreach ($models as $name => $model)
-                        <li>
+                        <li class="list-group-item">
                             <a href="/admin/{{ $name }}/">{{ title_case($name) }}</a>
                         </li>
                         @endforeach
