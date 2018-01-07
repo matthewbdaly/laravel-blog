@@ -692,12 +692,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthewbdaly/laravel-admin.git",
-                "reference": "5dc5869f2ecdde7baab30cd928c374baa6e69294"
+                "reference": "05933b55134703b8f9eb2cdc5be4117554690869"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthewbdaly/laravel-admin/zipball/5dc5869f2ecdde7baab30cd928c374baa6e69294",
-                "reference": "5dc5869f2ecdde7baab30cd928c374baa6e69294",
+                "url": "https://api.github.com/repos/matthewbdaly/laravel-admin/zipball/05933b55134703b8f9eb2cdc5be4117554690869",
+                "reference": "05933b55134703b8f9eb2cdc5be4117554690869",
                 "shasum": ""
             },
             "require-dev": {
@@ -736,7 +736,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2018-01-07T21:04:29+00:00"
+            "time": "2018-01-07T21:32:18+00:00"
         },
         {
             "name": "matthewbdaly/laravel-comments",
@@ -796,16 +796,16 @@
         },
         {
             "name": "matthewbdaly/laravel-flatpages",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthewbdaly/laravel-flatpages.git",
-                "reference": "948f3d6599557f710440c90029a46260dc38a134"
+                "reference": "7f60d4be207e98b5c2911e88062264b6c6bce695"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthewbdaly/laravel-flatpages/zipball/948f3d6599557f710440c90029a46260dc38a134",
-                "reference": "948f3d6599557f710440c90029a46260dc38a134",
+                "url": "https://api.github.com/repos/matthewbdaly/laravel-flatpages/zipball/7f60d4be207e98b5c2911e88062264b6c6bce695",
+                "reference": "7f60d4be207e98b5c2911e88062264b6c6bce695",
                 "shasum": ""
             },
             "require": {
@@ -850,7 +850,7 @@
                 "laravel",
                 "pages"
             ],
-            "time": "2018-01-03T11:33:32+00:00"
+            "time": "2018-01-07T21:16:49+00:00"
         },
         {
             "name": "matthewbdaly/laravel-repositories",
