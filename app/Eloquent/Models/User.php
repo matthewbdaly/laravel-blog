@@ -4,6 +4,7 @@ namespace LaravelBlog\Eloquent\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Matthewbdaly\LaravelAdmin\Contracts\Adminable;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isAdmin()
+    {
+        return true;
+    }
 }
