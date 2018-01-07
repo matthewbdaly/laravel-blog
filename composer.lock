@@ -692,12 +692,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthewbdaly/laravel-admin.git",
-                "reference": "12dcfb483565a49a65b3f8aae145bfa873add5eb"
+                "reference": "5dc5869f2ecdde7baab30cd928c374baa6e69294"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthewbdaly/laravel-admin/zipball/12dcfb483565a49a65b3f8aae145bfa873add5eb",
-                "reference": "12dcfb483565a49a65b3f8aae145bfa873add5eb",
+                "url": "https://api.github.com/repos/matthewbdaly/laravel-admin/zipball/5dc5869f2ecdde7baab30cd928c374baa6e69294",
+                "reference": "5dc5869f2ecdde7baab30cd928c374baa6e69294",
                 "shasum": ""
             },
             "require-dev": {
@@ -736,26 +736,27 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2018-01-07T20:19:30+00:00"
+            "time": "2018-01-07T21:04:29+00:00"
         },
         {
             "name": "matthewbdaly/laravel-comments",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthewbdaly/laravel-comments.git",
-                "reference": "1a5f87c3f46f86270eb2312050b23ba520f506bd"
+                "reference": "67480e5d88c7fa6cc50047a920d41dabc6286111"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthewbdaly/laravel-comments/zipball/1a5f87c3f46f86270eb2312050b23ba520f506bd",
-                "reference": "1a5f87c3f46f86270eb2312050b23ba520f506bd",
+                "url": "https://api.github.com/repos/matthewbdaly/laravel-comments/zipball/67480e5d88c7fa6cc50047a920d41dabc6286111",
+                "reference": "67480e5d88c7fa6cc50047a920d41dabc6286111",
                 "shasum": ""
             },
             "require": {
                 "matthewbdaly/laravel-repositories": "^1.0"
             },
             "require-dev": {
+                "matthewbdaly/artisan-standalone": "^0.0.3",
                 "mockery/mockery": "^1.0",
                 "orchestra/testbench": "^3.5",
                 "phpunit/phpunit": "^6.4",
@@ -791,7 +792,7 @@
                 "comments",
                 "laravel"
             ],
-            "time": "2017-12-29T22:25:49+00:00"
+            "time": "2018-01-07T21:12:28+00:00"
         },
         {
             "name": "matthewbdaly/laravel-flatpages",
