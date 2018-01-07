@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 class AdminResourceController extends Controller
 {
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+        $this->modelName = $request->route('resource');
+        $this->modelClass = config('admin.models')[$this->modelName];
+        $this->model = new $this->modelClass();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,11 @@ class AdminResourceController extends Controller
      */
     public function index()
     {
-        //
+        $data = $this->model->all();
+        return view('admin::resource.index', [
+            'items' => $data,
+            'model_name' => $this->modelName,
+        ]);
     }
 
     /**
