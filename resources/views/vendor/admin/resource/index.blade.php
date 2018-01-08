@@ -15,7 +15,13 @@
             <ul class="list-group">
                 @foreach ($items as $item)
                 <li class="list-group-item">
+                    @if ($item->name)
+                    <a href="/admin/{{ $model_name }}/{{ $item->id }}/">{{ $item->name }}</a>
+                    @elseif ($item->title)
+                    <a href="/admin/{{ $model_name }}/{{ $item->id }}/">{{ $item->title }}</a>
+                    @else
                     <a href="/admin/{{ $model_name }}/{{ $item->id }}/">{{ $item->id }}</a>
+                    @endif
                 </li>
                 @endforeach
             </ul>
