@@ -1041,12 +1041,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthewbdaly/laravel-admin.git",
-                "reference": "c2d94f81656a4390c33f4eb9effa69ed1aff99b5"
+                "reference": "4faa622a8caca1a63347203bb58dafbd79140940"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthewbdaly/laravel-admin/zipball/c2d94f81656a4390c33f4eb9effa69ed1aff99b5",
-                "reference": "c2d94f81656a4390c33f4eb9effa69ed1aff99b5",
+                "url": "https://api.github.com/repos/matthewbdaly/laravel-admin/zipball/4faa622a8caca1a63347203bb58dafbd79140940",
+                "reference": "4faa622a8caca1a63347203bb58dafbd79140940",
                 "shasum": ""
             },
             "require-dev": {
@@ -1085,7 +1085,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2018-01-07T22:30:23+00:00"
+            "time": "2018-01-08T18:20:53+00:00"
         },
         {
             "name": "matthewbdaly/laravel-comments",
