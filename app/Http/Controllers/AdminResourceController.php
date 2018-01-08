@@ -12,8 +12,10 @@ class AdminResourceController extends Controller
     {
         $this->request = $request;
         $this->modelName = $request->route('resource');
-        $this->modelClass = config('admin.models')[$this->modelName];
-        $this->model = new $this->modelClass();
+        if ($this->modelName) {
+            $this->modelClass = config('admin.models')[$this->modelName];
+            $this->model = new $this->modelClass();
+        }
     }
 
     /**
