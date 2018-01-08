@@ -4,6 +4,7 @@ namespace LaravelBlog\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
+use Cache;
 
 class AdminResourceController extends Controller
 {
@@ -51,7 +52,13 @@ class AdminResourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = $this->model->create($request->all());
+        Cache::flush();
+        $fields = $this->getModelAttributes();
+        return redirect()->route('admin.resource.show', [
+            'resource' => $this->modelName,
+            'id' => $model->id
+        ]);
     }
 
     /**
@@ -83,6 +90,7 @@ class AdminResourceController extends Controller
     {
         $original = $this->model->find($id);
         $model = $original->update($request->all());
+        Cache::flush();
         $fields = $this->getModelAttributes();
         return redirect()->route('admin.resource.show', [
             'resource' => $this->modelName,
@@ -107,10 +115,12 @@ class AdminResourceController extends Controller
         $fields = array_values(Schema::getColumnListing($table));
         $fielddata = [];
         foreach ($fields as $field){
-            try {
-                $fielddata[$field] = Schema::getColumnType($table, $field);
-            } catch (\Exception $e) {
-                $fielddata[$field] = 'unknown';
+            if ($field != 'id' && $field != 'created_at' && $field != 'updated_at' && $field != 'deleted_at') {
+                try {
+                    $fielddata[$field] = Schema::getColumnType($table, $field);
+                } catch (\Exception $e) {
+                    $fielddata[$field] = 'unknown';
+                }
             }
         }
         return $fielddata;
