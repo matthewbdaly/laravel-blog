@@ -21,6 +21,8 @@
 
                         @if($type == 'text')
                         <textarea id="{{ $name }}" class="form-control" name="{{ $name }}" rows="20" required>{{ old($name) }}"</textarea>
+                        @elseif($type == 'datetime')
+                        <input id="{{ $name }}" type="datetime-local" class="form-control" name="{{ $name }}" value="{{ old($name) }}" required autofocus>
                         @else
                         <input id="{{ $name }}" type="text" class="form-control" name="{{ $name }}" value="{{ old($name) }}" required autofocus>
                         @endif
