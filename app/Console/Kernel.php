@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \LaravelBlog\Console\Commands\Import::class,
+        \LaravelBlog\Console\Commands\CreateSuperUser::class,
     ];
 
     /**
