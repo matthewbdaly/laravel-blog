@@ -60,9 +60,15 @@ class AdminResourceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($resource, $id)
     {
-        //
+        $fields = $this->getModelAttributes();
+        $model = $this->model->findOrFail($id);
+        return view('admin::resource.show', [
+            'fields' => $fields,
+            'model' => $model,
+            'model_name' => $this->modelName,
+        ]);
     }
 
     /**
@@ -71,7 +77,7 @@ class AdminResourceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($resource, $id)
     {
         //
     }
@@ -83,7 +89,7 @@ class AdminResourceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $resource, $id)
     {
         //
     }
@@ -94,7 +100,7 @@ class AdminResourceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($resource, $id)
     {
         //
     }
