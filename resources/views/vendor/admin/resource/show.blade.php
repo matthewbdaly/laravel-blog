@@ -21,7 +21,7 @@
                     <div class="col-md-8">
 
                         @if($type == 'text')
-                        <textarea id="{{ $name }}" class="form-control" name="{{ $name }}" rows="20" required>{{ $model->getAttribute($name) }}"</textarea>
+                        <textarea id="{{ $name }}" class="form-control" name="{{ $name }}" rows="20" required>{{ $model->getAttribute($name) }}</textarea>
                         @elseif($type == 'datetime')
                         <input id="{{ $name }}" type="datetime-local" class="form-control" name="{{ $name }}" value="{{ $model->getAttribute($name) }}" required autofocus>
                         @else
