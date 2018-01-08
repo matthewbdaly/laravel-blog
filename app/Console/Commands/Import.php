@@ -45,8 +45,6 @@ class Import extends Command
      */
     public function handle()
     {
-        DB::statement('TRUNCATE TABLE posts');
-        DB::statement('TRUNCATE TABLE flatpages');
         $user = User::first();
         $posts = Storage::files('import/posts');
         foreach ($posts as $post) {
