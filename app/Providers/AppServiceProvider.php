@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Register the TSVECTOR column
+        $conn = $this->app->make('Illuminate\Database\ConnectionInterface');
+        $conn->getDoctrineSchemaManager()
+            ->getDatabasePlatform()
+            ->registerDoctrineTypeMapping('tsvector', 'string');
     }
 
     /**
