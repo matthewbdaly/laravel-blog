@@ -84,7 +84,10 @@ class AdminResourceController extends Controller
         $original = $this->model->find($id);
         $model = $original->update($request->all());
         $fields = $this->getModelAttributes();
-        return route()->redirect('admin/'.$this->modelName.'/'.$id);
+        return redirect()->route('admin.resource.show', [
+            'resource' => $this->modelName,
+            'id' => $id
+        ]);
     }
 
     /**

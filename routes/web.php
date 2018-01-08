@@ -18,7 +18,7 @@ Route::get('/{slug}', 'FrontPageController@bySlug')->where('slug', '^\d{4}/\d{2}
 Route::get('/admin/{resource}', 'AdminResourceController@index')->middleware('admin_model_exists');
 Route::get('/admin/{resource}/create', 'AdminResourceController@create')->middleware('admin_model_exists');
 Route::post('/admin/{resource}', 'AdminResourceController@store')->middleware('admin_model_exists');
-Route::get('/admin/{resource}/{id}', 'AdminResourceController@show')->middleware('admin_model_exists');
+Route::get('/admin/{resource}/{id}', 'AdminResourceController@show')->middleware('admin_model_exists')->name('admin.resource.show');
 Route::put('/admin/{resource}/{id}', 'AdminResourceController@update')->middleware('admin_model_exists');
 Route::patch('/admin/{resource}/{id}', 'AdminResourceController@update')->middleware('admin_model_exists');
 Route::delete('/admin/{resource}/{id}', 'AdminResourceController@destroy')->middleware('admin_model_exists');
