@@ -18,9 +18,13 @@
                 <div class="form-group{{ $errors->has($name) ? ' has-error' : '' }}">
                     <label for="email" class="col-md-4 control-label">{{ title_case($name) }}</label>
 
-                    <div class="col-md-6">
+                    <div class="col-md-8">
 
-                        <input id="{{ $name }}" type="text" class="form-control" name="{{ $name }}" value="{{ $model->getAttribute($name) }}" required autofocus>
+                        @if($type == 'text')
+                        <textarea id="{{ $name }}" class="form-control" name="{{ $name }}" rows="20" required>{{ $model->getAttribute($name) }}"</textarea>
+                        @else
+                        <input id="{{ $name }}" type="text" class="form-control" name="{{ $name }}" value="{{ $model->getAttribute($name) }}" required>
+                        @endif
 
                         @if ($errors->has($name))
                         <span class="help-block">
