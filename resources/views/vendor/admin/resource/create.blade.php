@@ -19,7 +19,11 @@
 
                     <div class="col-md-6">
 
+                        @if($type == 'text')
+                        <textarea id="{{ $name }}" class="form-control" name="{{ $name }}" rows="20" required>{{ old($name) }}"</textarea>
+                        @else
                         <input id="{{ $name }}" type="text" class="form-control" name="{{ $name }}" value="{{ old($name) }}" required autofocus>
+                        @endif
 
                         @if ($errors->has($name))
                         <span class="help-block">
