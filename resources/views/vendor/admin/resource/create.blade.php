@@ -10,8 +10,7 @@
             </div>
             @endif
 
-            You are logged in!
-            <form class="form-horizontal" method="POST" action="{{ route('admin.login') }}">
+            <form class="form-horizontal" method="POST" action="/admin/{{ $model_name }}/">
                 {{ csrf_field() }}
 
                 @foreach ($fields as $name => $type)

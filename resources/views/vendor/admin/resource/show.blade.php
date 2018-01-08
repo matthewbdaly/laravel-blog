@@ -10,7 +10,6 @@
             </div>
             @endif
 
-            You are logged in!
             <form class="form-horizontal" method="POST" action="/admin/{{ $model_name }}/{{ $id }}">
                 {{ csrf_field() }}
 
