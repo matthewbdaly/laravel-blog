@@ -51,7 +51,7 @@ class CreateSuperUser extends Command
         $email = $this->ask('Please provide the email address');
 
         // Get password
-        $password = $this->ask('Please provide the password');
+        $password = $this->secret('Please provide the password');
 
         // Create model
         $user = new $model;
