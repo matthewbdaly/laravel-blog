@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Http\Controllers;
+namespace Matthewbdaly\LaravelBlog\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;

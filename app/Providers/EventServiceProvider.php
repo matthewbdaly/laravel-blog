@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Providers;
+namespace Matthewbdaly\LaravelBlog\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'LaravelBlog\Events\Event' => [
-            'LaravelBlog\Listeners\EventListener',
+        'Matthewbdaly\LaravelBlog\Events\Event' => [
+            'Matthewbdaly\LaravelBlog\Listeners\EventListener',
         ],
     ];
 

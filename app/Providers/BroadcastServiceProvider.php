@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Providers;
+namespace Matthewbdaly\LaravelBlog\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

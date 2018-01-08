@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Console;
+namespace Matthewbdaly\LaravelBlog\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -13,8 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \LaravelBlog\Console\Commands\Import::class,
-        \LaravelBlog\Console\Commands\CreateSuperUser::class,
+        \Matthewbdaly\LaravelBlog\Console\Commands\Import::class,
+        \Matthewbdaly\LaravelBlog\Console\Commands\CreateSuperUser::class,
     ];
 
     /**

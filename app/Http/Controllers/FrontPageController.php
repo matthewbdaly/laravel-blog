@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelBlog\Http\Controllers;
+namespace Matthewbdaly\LaravelBlog\Http\Controllers;
 
 use Illuminate\Http\Request;
-use LaravelBlog\Contracts\Repositories\Post;
+use Matthewbdaly\LaravelBlog\Contracts\Repositories\Post;
 use Illuminate\Pagination\Paginator;
 
 class FrontPageController extends Controller

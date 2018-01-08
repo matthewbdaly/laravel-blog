@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Providers;
+namespace Matthewbdaly\LaravelBlog\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'LaravelBlog\Model' => 'LaravelBlog\Policies\ModelPolicy',
+        'Matthewbdaly\LaravelBlog\Model' => 'Matthewbdaly\LaravelBlog\Policies\ModelPolicy',
     ];
 
     /**

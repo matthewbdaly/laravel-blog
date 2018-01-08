@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    LaravelBlog\Http\Kernel::class
+    Matthewbdaly\LaravelBlog\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    LaravelBlog\Console\Kernel::class
+    Matthewbdaly\LaravelBlog\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    LaravelBlog\Exceptions\Handler::class
+    Matthewbdaly\LaravelBlog\Exceptions\Handler::class
 );
 
 /*

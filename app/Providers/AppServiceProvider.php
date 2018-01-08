@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Providers;
+namespace Matthewbdaly\LaravelBlog\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,9 +27,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('LaravelBlog\Contracts\Repositories\Post', function () {
-            $baseRepo = new \LaravelBlog\Eloquent\Repositories\Post(new \LaravelBlog\Eloquent\Models\Post);
-            $cachingRepo = new \LaravelBlog\Eloquent\Repositories\Decorators\Post($baseRepo, $this->app['cache.store']);
+        $this->app->singleton('Matthewbdaly\LaravelBlog\Contracts\Repositories\Post', function () {
+            $baseRepo = new \Matthewbdaly\LaravelBlog\Eloquent\Repositories\Post(new \Matthewbdaly\LaravelBlog\Eloquent\Models\Post);
+            $cachingRepo = new \Matthewbdaly\LaravelBlog\Eloquent\Repositories\Decorators\Post($baseRepo, $this->app['cache.store']);
             return $cachingRepo;
         });
     }

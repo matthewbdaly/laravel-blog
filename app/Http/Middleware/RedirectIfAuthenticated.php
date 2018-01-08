@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Http\Middleware;
+namespace Matthewbdaly\LaravelBlog\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

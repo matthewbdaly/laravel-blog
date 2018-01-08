@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Console\Commands;
+namespace Matthewbdaly\LaravelBlog\Console\Commands;
 
 use Illuminate\Console\Command;
 use Hash;

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Http\Middleware;
+namespace Matthewbdaly\LaravelBlog\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
 

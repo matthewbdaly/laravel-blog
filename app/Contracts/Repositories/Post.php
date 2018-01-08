@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Contracts\Repositories;
+namespace Matthewbdaly\LaravelBlog\Contracts\Repositories;
 
 use Matthewbdaly\LaravelRepositories\Repositories\Interfaces\AbstractRepositoryInterface;
 

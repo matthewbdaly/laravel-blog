@@ -12,10 +12,10 @@ return [
     */
     'models' => [
 
-        'users' => 'LaravelBlog\Eloquent\Models\User',
-        'posts' => 'LaravelBlog\Eloquent\Models\Post',
-        'categories' => 'LaravelBlog\Eloquent\Models\Category',
-        'tags' => 'LaravelBlog\Eloquent\Models\Tag',
+        'users' => 'Matthewbdaly\LaravelBlog\Eloquent\Models\User',
+        'posts' => 'Matthewbdaly\LaravelBlog\Eloquent\Models\Post',
+        'categories' => 'Matthewbdaly\LaravelBlog\Eloquent\Models\Category',
+        'tags' => 'Matthewbdaly\LaravelBlog\Eloquent\Models\Tag',
 
     ]
 ];

@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelBlog\Eloquent\Repositories\Decorators;
+namespace Matthewbdaly\LaravelBlog\Eloquent\Repositories\Decorators;
 
 use Matthewbdaly\LaravelRepositories\Repositories\Decorators\BaseDecorator;
-use LaravelBlog\Contracts\Repositories\Post as PostContract;
+use Matthewbdaly\LaravelBlog\Contracts\Repositories\Post as PostContract;
 use Illuminate\Contracts\Cache\Repository as Cache;
 
 class Post extends BaseDecorator implements PostContract

@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelBlog\Http\Controllers\Auth;
+namespace Matthewbdaly\LaravelBlog\Http\Controllers\Auth;
 
-use LaravelBlog\User;
-use LaravelBlog\Http\Controllers\Controller;
+use Matthewbdaly\LaravelBlog\User;
+use Matthewbdaly\LaravelBlog\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -58,7 +58,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \LaravelBlog\User
+     * @return \Matthewbdaly\LaravelBlog\User
      */
     protected function create(array $data)
     {

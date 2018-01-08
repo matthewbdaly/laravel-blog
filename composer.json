@@ -29,7 +29,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "LaravelBlog\\": "app/"
+            "Matthewbdaly\\LaravelBlog\\": "app/"
         }
     },
     "autoload-dev": {

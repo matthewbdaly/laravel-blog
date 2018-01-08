@@ -1,12 +1,12 @@
 <?php
 
-namespace LaravelBlog\Console\Commands;
+namespace Matthewbdaly\LaravelBlog\Console\Commands;
 
 use Illuminate\Console\Command;
 use Mni\FrontYAML\Parser;
 use Storage;
-use LaravelBlog\Eloquent\Models\Post;
-use LaravelBlog\Eloquent\Models\User;
+use Matthewbdaly\LaravelBlog\Eloquent\Models\Post;
+use Matthewbdaly\LaravelBlog\Eloquent\Models\User;
 use Matthewbdaly\LaravelFlatpages\Eloquent\Models\Flatpage;
 use Carbon\Carbon;
 use DB;

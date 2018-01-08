@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBlog\Http;
+namespace Matthewbdaly\LaravelBlog\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -16,9 +16,9 @@ class Kernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \LaravelBlog\Http\Middleware\TrimStrings::class,
+        \Matthewbdaly\LaravelBlog\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \LaravelBlog\Http\Middleware\TrustProxies::class,
+        \Matthewbdaly\LaravelBlog\Http\Middleware\TrustProxies::class,
         \Matthewbdaly\LaravelFlatpages\Http\Middleware\FlatpageMiddleware::class,
     ];
 
@@ -29,12 +29,12 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \LaravelBlog\Http\Middleware\EncryptCookies::class,
+            \Matthewbdaly\LaravelBlog\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \LaravelBlog\Http\Middleware\VerifyCsrfToken::class,
+            \Matthewbdaly\LaravelBlog\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -56,9 +56,9 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \LaravelBlog\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Matthewbdaly\LaravelBlog\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'admin' => \Matthewbdaly\LaravelAdmin\Http\Middleware\Admin::class,
-        'admin_model_exists' => \LaravelBlog\Http\Middleware\AdminModelExists::class,
+        'admin_model_exists' => \Matthewbdaly\LaravelBlog\Http\Middleware\AdminModelExists::class,
     ];
 }

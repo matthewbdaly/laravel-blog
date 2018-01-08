@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelBlog\Eloquent\Repositories;
+namespace Matthewbdaly\LaravelBlog\Eloquent\Repositories;
 
 use Matthewbdaly\LaravelRepositories\Repositories\Base;
-use LaravelBlog\Contracts\Repositories\Post as PostContract;
-use LaravelBlog\Eloquent\Models\Post as Model;
+use Matthewbdaly\LaravelBlog\Contracts\Repositories\Post as PostContract;
+use Matthewbdaly\LaravelBlog\Eloquent\Models\Post as Model;
 
 class Post extends Base implements PostContract
 {
