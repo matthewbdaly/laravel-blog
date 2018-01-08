@@ -3,6 +3,7 @@
 namespace LaravelBlog\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
 
 class AdminResourceController extends Controller
 {
@@ -35,7 +36,11 @@ class AdminResourceController extends Controller
      */
     public function create()
     {
-        //
+        $fields = $this->getModelAttributes();
+        return view('admin::resource.create', [
+            'fields' => $fields,
+            'model_name' => $this->modelName,
+        ]);
     }
 
     /**
@@ -92,5 +97,20 @@ class AdminResourceController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function getModelAttributes()
+    {
+        $table = $this->model->getTable();
+        $fields = array_values(Schema::getColumnListing($table));
+        $fielddata = [];
+        foreach ($fields as $field){
+            try {
+                $fielddata[$field] = Schema::getColumnType($table, $field);
+            } catch (\Exception $e) {
+                $fielddata[$field] = 'unknown';
+            }
+        }
+        return $fielddata;
     }
 }
