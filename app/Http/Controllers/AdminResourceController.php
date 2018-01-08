@@ -109,7 +109,7 @@ class AdminResourceController extends Controller
     public function destroy($resource, $id)
     {
         $model = $this->model->find($id);
-        $model->destroy();
+        $model->delete();
         Cache::flush();
         $fields = $this->getModelAttributes();
         return redirect()->route('admin.resource', [
