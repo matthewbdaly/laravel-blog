@@ -15,6 +15,7 @@ return [
         'users' => 'LaravelBlog\Eloquent\Models\User',
         'posts' => 'LaravelBlog\Eloquent\Models\Post',
         'categories' => 'LaravelBlog\Eloquent\Models\Category',
+        'tags' => 'LaravelBlog\Eloquent\Models\Tag',
 
     ]
 ];
