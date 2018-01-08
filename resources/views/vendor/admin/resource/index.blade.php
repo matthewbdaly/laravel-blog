@@ -11,6 +11,7 @@
             @endif
 
             <h2>{{ title_case($model_name) }}</h2>
+            <a href="/admin/{{ $model_name }}/create" class="btn btn-primary btn-block">Create</a>
             <ul class="list-group">
                 @foreach ($items as $item)
                 <li class="list-group-item">
