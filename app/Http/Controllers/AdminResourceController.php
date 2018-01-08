@@ -65,21 +65,11 @@ class AdminResourceController extends Controller
         $fields = $this->getModelAttributes();
         $model = $this->model->findOrFail($id);
         return view('admin::resource.show', [
+            'id' => $id,
             'fields' => $fields,
             'model' => $model,
             'model_name' => $this->modelName,
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($resource, $id)
-    {
-        //
     }
 
     /**
@@ -91,7 +81,10 @@ class AdminResourceController extends Controller
      */
     public function update(Request $request, $resource, $id)
     {
-        //
+        $original = $this->model->find($id);
+        $model = $original->update($request->all());
+        $fields = $this->getModelAttributes();
+        return route()->redirect('admin/'.$this->modelName.'/'.$id);
     }
 
     /**

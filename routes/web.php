@@ -19,7 +19,6 @@ Route::get('/admin/{resource}', 'AdminResourceController@index')->middleware('ad
 Route::get('/admin/{resource}/create', 'AdminResourceController@create')->middleware('admin_model_exists');
 Route::post('/admin/{resource}', 'AdminResourceController@store')->middleware('admin_model_exists');
 Route::get('/admin/{resource}/{id}', 'AdminResourceController@show')->middleware('admin_model_exists');
-Route::get('/admin/{resource}/{id}/edit', 'AdminResourceController@edit')->middleware('admin_model_exists');
 Route::put('/admin/{resource}/{id}', 'AdminResourceController@update')->middleware('admin_model_exists');
 Route::patch('/admin/{resource}/{id}', 'AdminResourceController@update')->middleware('admin_model_exists');
 Route::delete('/admin/{resource}/{id}', 'AdminResourceController@destroy')->middleware('admin_model_exists');
