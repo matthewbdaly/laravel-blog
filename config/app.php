@@ -176,6 +176,7 @@ return [
         // Matthewbdaly\LaravelBlog\Providers\BroadcastServiceProvider::class,
         Matthewbdaly\LaravelBlog\Providers\EventServiceProvider::class,
         Matthewbdaly\LaravelBlog\Providers\RouteServiceProvider::class,
+        Matthewbdaly\LaravelBlog\Providers\HelperServiceProvider::class,
 
     ],
 

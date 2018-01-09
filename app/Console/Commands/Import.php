@@ -48,7 +48,7 @@ class Import extends Command
         $user = User::first();
         $posts = Storage::files('import/posts');
         foreach ($posts as $post) {
-            $document = $this->parser->parse(Storage::get($post));
+            $document = $this->parser->parse(Storage::get($post), false);
             $content = $document->getContent();
             $yaml = $document->getYAML();
             $pubDate = Carbon::parse($yaml['date']);
