@@ -64,7 +64,7 @@ class Import extends Command
         }
         $pages = Storage::files('import/pages');
         foreach ($pages as $page) {
-            $document = $this->parser->parse(Storage::get($page));
+            $document = $this->parser->parse(Storage::get($page), false);
             $content = $document->getContent();
             $yaml = $document->getYAML();
             $yaml['slug'] = "/".explode(".", explode("/", $page)[2])[0]."/";
