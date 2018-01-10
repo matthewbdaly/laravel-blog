@@ -7,6 +7,7 @@
 
         <title>Laravel</title>
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
+        <link href="/opensearch.xml" rel="search" title="Search Matthew Daly's Blog" type="application/opensearchdescription+xml">
 
     </head>
     <body>
