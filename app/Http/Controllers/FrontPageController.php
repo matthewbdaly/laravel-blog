@@ -48,8 +48,8 @@ class FrontPageController extends Controller
         $perPage = 5;
         $search = $request->input('q');
         $page = $request->input('page', 1);
-        $data = $this->repository->search($search)->slice((($page - 1) * $perPage), $perPage);
-        $posts = new Paginator($data, $perPage, $page);
+        $data = $this->repository->search($search);
+        $posts = new Paginator($data->slice(($page - 1) * $perPage), $perPage, $page);
         $posts->withPath('search');
         return view('search', [
             'posts' => $posts,
