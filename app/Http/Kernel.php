@@ -20,6 +20,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \Matthewbdaly\LaravelBlog\Http\Middleware\TrustProxies::class,
         \Matthewbdaly\LaravelFlatpages\Http\Middleware\FlatpageMiddleware::class,
+        \Matthewbdaly\ETagMiddleware\ETag::class,
     ];
 
     /**

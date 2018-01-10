@@ -12,6 +12,7 @@
         "laravel/tinker": "~1.0",
         "matthewbdaly/laravel-admin": "dev-master",
         "matthewbdaly/laravel-comments": "^1.0",
+        "matthewbdaly/laravel-etag-middleware": "^1.0",
         "matthewbdaly/laravel-flatpages": "^1.0",
         "matthewbdaly/laravel-repositories": "^1.0",
         "mnapoli/front-yaml": "^1.6",
