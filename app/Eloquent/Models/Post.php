@@ -4,6 +4,7 @@ namespace Matthewbdaly\LaravelBlog\Eloquent\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Matthewbdaly\LaravelComments\Eloquent\Traits\Commentable;
+use Matthewbdaly\LaravelBlog\Events\PostBeingCreated;
 
 class Post extends Model
 {
@@ -14,7 +15,10 @@ class Post extends Model
         'pub_date',
         'text',
         'slug',
-        'author_id'
+    ];
+
+    protected $dispatchesEvents = [
+        'creating' => PostBeingCreated::class,
     ];
 
     public function scopeSearch($query, $search)

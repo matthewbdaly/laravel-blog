@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Matthewbdaly\LaravelBlog\Events\Event' => [
-            'Matthewbdaly\LaravelBlog\Listeners\EventListener',
+        'Matthewbdaly\LaravelBlog\Events\PostBeingCreated' => [
+            'Matthewbdaly\LaravelBlog\Listeners\PostBeingCreated',
         ],
     ];
 
