@@ -14,7 +14,7 @@
         <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <img src="http://www.placecage.com/c/20/20" alt="Matthew Daly's Blog" width="20" height="20">
+                    <img src="https://www.placecage.com/c/20/20" alt="Matthew Daly's Blog" width="20" height="20">
                 </a>
 
                 <button class="button navbar-burger">
