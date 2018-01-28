@@ -15,6 +15,7 @@ class Post extends Model
         'pub_date',
         'text',
         'slug',
+        'author_id',
     ];
 
     protected $dispatchesEvents = [

@@ -47,6 +47,7 @@ class Import extends Command
     {
         $user = User::first();
         $posts = Storage::files('import/posts');
+        DB::statement('TRUNCATE TABLE posts CASCADE');
         foreach ($posts as $post) {
             $document = $this->parser->parse(Storage::get($post), false);
             $content = $document->getContent();
