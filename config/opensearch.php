@@ -10,9 +10,9 @@ return [
     | Include your site's search template, description and name
     |
     */
-    'description' => 'Search localhost:8000',
+    'description' => 'Search laravel-blog.shellshocked.info',
 
-    'shortname' => 'localhost:8000',
+    'shortname' => 'laravel-blog.shellshocked.info',
 
-    'template' => 'http://localhost:8000/search?q={searchTerms}',
+    'template' => 'https://laravel-blog.shellshocked.info/search?q={searchTerms}',
 ];
