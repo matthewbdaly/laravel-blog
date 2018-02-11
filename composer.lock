@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e249ba69348a826b536d0c4967f6a5fb",
+    "content-hash": "81923ade29c5bc1b842a29a5bc9e6b91",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1262,16 +1262,16 @@
         },
         {
             "name": "matthewbdaly/laravel-opensearch",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthewbdaly/laravel-opensearch.git",
-                "reference": "50660ba6e30218d0189a4882c2ff7d58ac643ef9"
+                "reference": "4f52c566fe8448da84ba4d29e5580b4a28fab023"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthewbdaly/laravel-opensearch/zipball/50660ba6e30218d0189a4882c2ff7d58ac643ef9",
-                "reference": "50660ba6e30218d0189a4882c2ff7d58ac643ef9",
+                "url": "https://api.github.com/repos/matthewbdaly/laravel-opensearch/zipball/4f52c566fe8448da84ba4d29e5580b4a28fab023",
+                "reference": "4f52c566fe8448da84ba4d29e5580b4a28fab023",
                 "shasum": ""
             },
             "require-dev": {
@@ -1313,7 +1313,7 @@
                 "opensearch",
                 "search"
             ],
-            "time": "2018-01-10T21:43:25+00:00"
+            "time": "2018-02-11T22:04:27+00:00"
         },
         {
             "name": "matthewbdaly/laravel-repositories",

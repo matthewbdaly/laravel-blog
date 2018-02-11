@@ -14,7 +14,7 @@
         "matthewbdaly/laravel-comments": "^1.0",
         "matthewbdaly/laravel-etag-middleware": "^1.0",
         "matthewbdaly/laravel-flatpages": "^1.0",
-        "matthewbdaly/laravel-opensearch": "^0.0.1",
+        "matthewbdaly/laravel-opensearch": "0.0.*",
         "matthewbdaly/laravel-repositories": "^1.0",
         "mnapoli/front-yaml": "^1.6",
         "predis/predis": "^1.1"
